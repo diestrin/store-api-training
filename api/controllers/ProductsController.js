@@ -6,6 +6,13 @@
  */
 
 module.exports = {
-	
+  changeColor: function (req, res) {
+    Products.changeColor({
+      id: req.param('id'),
+      color: req.param('color');
+    }, function () {
+      res.ok();
+    });
+  }
 };
 

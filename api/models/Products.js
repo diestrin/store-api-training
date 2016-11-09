@@ -6,9 +6,17 @@
  */
 
 module.exports = {
-
   attributes: {
-
+    name: {
+      type: 'string',
+      required: true
+    },
+    color: {
+      type: 'string',
+      enum: ['red', 'blue', 'orange']
+    }
+  },
+  changeColor: function (opts, done) {
+    Products.update(opts.id, {color: opts.color}, done);
   }
 };
-
