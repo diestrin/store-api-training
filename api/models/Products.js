@@ -11,12 +11,23 @@ module.exports = {
       type: 'string',
       required: true
     },
-    color: {
+    description: {
+      type: 'string'
+    },
+    price: {
+      type: 'float',
+      required: true
+    },
+    image: {
+      type: 'string'
+    },
+    category: {
       type: 'string',
-      enum: ['red', 'blue', 'orange']
-    }
-  },
-  changeColor: function (opts, done) {
-    Products.update(opts.id, {color: opts.color}, done);
+      required: true
+    },
+    stock: {
+      type: 'float',
+      required: true
+    },
   }
 };
